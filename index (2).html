@@ -1,0 +1,307 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Une lettre pour mon amour ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            text-align: center;
+            padding: 40px 25px;
+        }
+
+        .heart {
+            font-size: 70px;
+            animation: heartbeat 1.3s infinite;
+        }
+
+        h1 {
+            color: #8b1e3f;
+            font-size: 38px;
+        }
+
+        .subtitle {
+            color: #6d214f;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .box {
+            background: rgba(255,255,255,0.92);
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(120,20,60,0.25);
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #f08aaa;
+            border-radius: 12px;
+            font-size: 18px;
+            text-align: center;
+            outline: none;
+            margin-bottom: 18px;
+        }
+
+        button {
+            border: none;
+            padding: 14px 30px;
+            border-radius: 30px;
+            background: #c9184a;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #a4133c;
+            transform: scale(1.05);
+        }
+
+        #letter {
+            display: none;
+            text-align: left;
+            line-height: 1.9;
+            color: #4a2030;
+            font-size: 18px;
+            animation: appear 1.5s ease;
+        }
+
+        #letter h2 {
+            text-align: center;
+            color: #c9184a;
+            font-size: 32px;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 30px;
+            font-style: italic;
+            color: #c9184a;
+            font-size: 20px;
+        }
+
+        .floating-heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 25px;
+            animation: float 6s linear forwards;
+            pointer-events: none;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart">❤️</div>
+
+    <h1>Une petite surprise pour toi...</h1>
+
+    <p class="subtitle">
+        Entre ton prénom pour découvrir quelque chose de spécial 💕
+    </p>
+
+    <div class="box">
+
+        <div id="nameBox">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Écris ton prénom ici..."
+            >
+
+            <button onclick="showLetter()">
+                Découvrir ma lettre ❤️
+            </button>
+
+        </div>
+
+        <div id="letter">
+
+            <h2>Pour toi, Charly ❤️</h2>
+
+            <p>
+                Mon amour,
+            </p>
+
+            <p>
+                Si tu lis cette lettre, c'est sûrement parce que ton prénom
+                est <strong id="displayName"></strong>...
+                mais dans mon cœur, il y a surtout un prénom qui résonne
+                un peu plus fort que les autres : <strong>Charly</strong>.
+            </p>
+
+            <p>
+                Je ne sais pas si les mots sont assez grands pour expliquer
+                tout ce que je ressens pour toi. Mais s'il fallait essayer,
+                je te dirais simplement que depuis que tu es dans ma vie,
+                quelque chose a changé.
+            </p>
+
+            <p>
+                Tu es devenu cette personne à laquelle je pense sans même
+                m'en rendre compte. Celle qui arrive à faire sourire mon cœur
+                juste avec un message, un regard, un petit mot ou simplement
+                avec sa présence.
+            </p>
+
+            <p>
+                J'aime ta façon d'être, tes petites habitudes, tes défauts,
+                tes qualités, tes sourires et même les moments où tu ne dis rien.
+                J'aime tout ce qui fait que tu es <strong>toi</strong>.
+            </p>
+
+            <p>
+                Et si je pouvais faire un seul vœu, ce serait de pouvoir
+                continuer à écrire notre histoire, page après page,
+                jour après jour.
+            </p>
+
+            <p>
+                Je ne te promets pas que tout sera toujours parfait,
+                mais je peux te promettre une chose :
+                mon amour sera toujours sincère.
+            </p>
+
+            <p>
+                Charly, tu es bien plus qu'une personne que j'aime.
+                Tu es une partie de mes pensées, de mes sourires,
+                de mes rêves et de mon bonheur.
+            </p>
+
+            <p>
+                Alors si parfois tu doutes de ce que tu représentes pour moi,
+                rappelle-toi simplement ceci :
+            </p>
+
+            <p style="text-align:center; font-size:22px; color:#c9184a;">
+                <strong>
+                    Je t'aime plus que les mots ne pourront jamais
+                    l'expliquer. ❤️
+                </strong>
+            </p>
+
+            <p>
+                Et peu importe combien de temps passera,
+                il y aura toujours une petite place dans mon cœur
+                qui portera ton prénom.
+            </p>
+
+            <div class="signature">
+                Avec tout mon amour ❤️<br>
+                Ta chérie
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+function showLetter() {
+
+    const name = document.getElementById("name").value.trim();
+
+    if (name === "") {
+        alert("Entre ton prénom avant de découvrir la lettre ❤️");
+        return;
+    }
+
+    document.getElementById("displayName").textContent = name;
+
+    document.getElementById("nameBox").style.display = "none";
+
+    document.getElementById("letter").style.display = "block";
+
+    createHearts();
+}
+
+function createHearts() {
+
+    for (let i = 0; i < 25; i++) {
+
+        setTimeout(() => {
+
+            const heart = document.createElement("div");
+
+            heart.classList.add("floating-heart");
+
+            heart.innerHTML = ["❤️", "💕", "💖", "💗", "💘"]
+                [Math.floor(Math.random() * 5)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+
+            heart.style.animationDuration =
+                (4 + Math.random() * 4) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+
+        }, i * 150);
+    }
+}
+
+</script>
+
+</body>
+</html>
+```
